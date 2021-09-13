@@ -73,11 +73,12 @@ int main()
     return 0;
 }*/
 //1.5
-/*
+
 #include <iostream>
 using namespace std;
 int main()
 {
+    setlocale(LC_ALL,"rus");
     bool day, curtains, lamp;
     cout << "Введите значения:\n";
     cin >> day >> curtains >> lamp;
@@ -91,4 +92,4 @@ int main()
         cout << "Темно";
     }
     return 0;
-}*/
+}

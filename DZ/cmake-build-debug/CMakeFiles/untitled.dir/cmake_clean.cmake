@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/Dz1.cpp.o"
-  "libuntitled.dll.a"
+  "CMakeFiles/untitled.dir/Dz1.cpp.obj"
   "untitled.exe"
+  "untitled.exe.manifest"
+  "untitled.lib"
   "untitled.pdb"
 )
 
