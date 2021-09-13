@@ -1,3 +1,3 @@
-/cygdrive/e/Work/INFORMATICS/DZ2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/e/Work/INFORMATICS/DZ2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/e/Work/INFORMATICS/DZ2/cmake-build-debug/CMakeFiles/DZ2.dir
+C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ2/cmake-build-debug/CMakeFiles/DZ2.dir
+C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

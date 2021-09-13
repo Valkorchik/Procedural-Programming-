@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/e/Work/INFORMATICS/DZ2/Dz2.cpp" "/cygdrive/e/Work/INFORMATICS/DZ2/cmake-build-debug/CMakeFiles/DZ2.dir/Dz2.cpp.o"
+  "C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ2/Dz2.cpp" "C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ2/cmake-build-debug/CMakeFiles/DZ2.dir/Dz2.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
