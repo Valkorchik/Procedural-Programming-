@@ -33,11 +33,10 @@ int main()
 {
     ofstream out("Test.txt");
     out<<"1111222ffffaaaaa(((((";
-    ifstream inf("Test.txt");
-    while (inf)
-    {
-        getline(inf,line);
-        cout<<line<<endl;
+    ifstream inf;
+    while(getline(inf,line)) {
+        cout << line << endl;
     }
+
     return 0;
 }
