@@ -15,8 +15,10 @@ int main()
     cout << a - b << endl;
     cout << a * b << endl;
     if (b != 0) {
-        cout << a % b;
+        cout << a / b;
     }
+    if (b==0){
+        cout<<"Error"";
     return 0;
 }*/
 //1.3
@@ -36,6 +38,9 @@ int main()
     if (c == 0 and b == 0) {
         cout << "Любое x";
     }
+    if (b==0){
+        cout<<"Error";
+    }
     return 0;
 }*/
 /*
@@ -54,11 +59,13 @@ int main()
     cin >> c;
     d = pow(b, 2) * (-4 * a * c);
     x3 = -(b / c);
-    if (a == 0) {
+    if (a == 0 and c!=0) {
         cout <<"Корень "<<x3;
     }
-    else
-    if (d > 0) {
+    if (c==0){
+        cout<<"Error";
+    }
+    else if (d > 0) {
         x1 = (-b + sqrt(d)) / (2 * a);
         x2 = (-b - sqrt(d)) / (2 * a);
         cout << x1 << " " << x2 << endl;
@@ -81,12 +88,8 @@ int main()
     bool day, curtains, lamp;
     cout << "Введите значения:\n";
     cin >> day >> curtains >> lamp;
-    if (lamp) {
+    if (day & (curtains | lamp)) {
         cout << "Светло";
-    }
-    else if (day & curtains) {
-        cout << "Светло";
-    }
     else {
         cout << "Темно";
     }
