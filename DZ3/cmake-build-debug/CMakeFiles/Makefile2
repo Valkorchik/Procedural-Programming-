@@ -43,10 +43,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\GX701LV PR#3\CLionProjects\DZ3"
+CMAKE_SOURCE_DIR = "C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\GX701LV PR#3\CLionProjects\DZ3\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ3\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -70,14 +70,14 @@ clean: CMakeFiles\DZ3.dir\clean
 CMakeFiles\DZ3.dir\all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DZ3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DZ3.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DZ3.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DZ3.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\GX701LV PR#3\CLionProjects\DZ3\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target DZ3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ3\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target DZ3"
 .PHONY : CMakeFiles\DZ3.dir\all
 
 # Build rule for subdir invocation for target.
 CMakeFiles\DZ3.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\GX701LV PR#3\CLionProjects\DZ3\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ3\cmake-build-debug\CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\DZ3.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\GX701LV PR#3\CLionProjects\DZ3\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ3\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles\DZ3.dir\rule
 
 # Convenience name for target.

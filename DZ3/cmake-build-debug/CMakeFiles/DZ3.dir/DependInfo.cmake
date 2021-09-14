@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/GX701LV PR#3/CLionProjects/DZ3/Dz3.cpp" "C:/Users/GX701LV PR#3/CLionProjects/DZ3/cmake-build-debug/CMakeFiles/DZ3.dir/Dz3.cpp.obj"
+  "C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ3/Dz3.cpp" "C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ3/cmake-build-debug/CMakeFiles/DZ3.dir/Dz3.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
