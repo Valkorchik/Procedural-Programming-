@@ -6,12 +6,13 @@ using namespace std;
 double V,R,r,h,S,l;
 int main()
 {
+    cout<<"Enter nums"<<endl;
     cin>>r>>R>>h;
     if (h,r,R>0){
         l=sqrt((h*h+pow((R-r),2)));
         V = (M_PI * h * (pow(R, 2) + R * r + pow(r, 2)) / 3);
         S = M_PI * (pow(R, 2) + (R + r) * l + pow(r, 2));
-        cout << V << " " << S;
+        cout << S << " " << V;
     }
     else{
     cout<<"Введите числа больше нуля";
@@ -23,18 +24,19 @@ int main()
 #define _USE_MATH_DEFINES
 #include <math.h>
 using namespace std;
-double w,a,x;
+float w,a,x;
+
 int main()
 {
     cout<<"Enter nums"<<endl;
     cin >> x>>a;
     if (abs(x) < 1) {
         w = a * log(abs(x));
-        cout << w;
+        cout << abs(w);
     }
     else if (abs(x) >= 1) {
         w = sqrt(a - pow(x, 2));
-        cout << w;
+        cout << abs(w);
     }
     return 0;
 }*/
@@ -46,14 +48,14 @@ using namespace std;
 double x, y, b,z;
 int main()
 {
-    cout << "Enter  x,y,b" << endl;
-    cin >> x >> y >> b;
-    if ((b - y)>0 and ((b-x)>=0)) {
+    cout << "Enter b,x,y" << endl;
+    cin >> b >> x >> y;
+    if ((b - y>0) and ((b-y)!=1) and (b-x>0))  {
         z =  log(b-y) * sqrt(b - x);
         cout << z;
     }
     else {
-        cout << "ERROROR";
+        cout << "ERROR";
     }
     return 0;
 
@@ -64,15 +66,15 @@ using namespace std;
 int N,i,k;
 int main()
 {
-    cout<<"Введите число\n";
+    cout<<"Enter number\n";
     cin>>N;
     if (N<=0){
-        cout<<"Число должно быть натуральным.";
+        cout<<"Number must be natural.";
     }
     else {
         for (i = N; k < 10; i++) {
-            k += 1;
             cout << i << endl;
+            k += 1;
         }
     }
     return 0;
@@ -81,11 +83,19 @@ int main()
 /*#include <iostream>
 using namespace std;
 float y,x;
+int k=0;
 int main()
 {
     for (x=-4;x<5;x+=0.5){
-        y=((x*x)-(2*x)+2)/(x-1);
-        cout<<y<<endl;
+        if (x==1){
+            cout<<"No solutions\n";
+        }
+        else
+        {
+            y=((x*x)-(2*x)+2)/(x-1);
+            k+=1;
+            cout<<"Solution "<<k<<": "<<y<<endl;
+        }
     }
     return 0;
 }*/
