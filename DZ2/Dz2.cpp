@@ -30,13 +30,23 @@ int main()
 {
     cout<<"Enter nums"<<endl;
     cin >> x>>a;
-    if (abs(x) < 1) {
-        w = a * log(abs(x));
-        cout << abs(w);
-    }
-    else if (abs(x) >= 1) {
-        w = sqrt(a - pow(x, 2));
-        cout << abs(w);
+    if (x==0){
+        cout<<"Error"<<endl;
+        }
+    else {
+        if (abs(x) < 1) {
+            w = a * log(abs(x));
+            cout << abs(w);
+        }
+        else {
+            if (s < 0) {
+                cout << "error\n";
+            }
+            else {
+                w = sqrt(a - pow(x, 2));
+                cout << abs(w);
+            }
+        }
     }
     return 0;
 }*/
@@ -50,7 +60,7 @@ int main()
 {
     cout << "Enter b,x,y" << endl;
     cin >> b >> x >> y;
-    if ((b - y>0) and ((b-y)!=1) and (b-x>0))  {
+    if ((b - y>0) and (b-x>0))  {
         z =  log(b-y) * sqrt(b - x);
         cout << z;
     }
@@ -68,7 +78,7 @@ int main()
 {
     cout<<"Enter number\n";
     cin>>N;
-    if (N<=0){
+    if (N<=0) or (N!=(int)(N){
         cout<<"Number must be natural.";
     }
     else {

@@ -14,7 +14,7 @@ int main()
     return 0;
 }*/
 //3.2
-/*#include <iostream>
+#include <iostream>
 #define USE_MATH_DEFINES
 #include <math.h>
 using namespace std;
@@ -31,7 +31,7 @@ int main() {
         r = p / 100;
         m1=(S * r * pow((1 + r), n)) / (12 * (pow((1 + r), n) - 1));
         if (m1>m){
-            cout<<"Your credit percent equals "<<p<<"%"<<endl;
+            cout<<"Your credit percent equals "<<p-1<<"%"<<endl;
         }
         if (p>100)
         {
@@ -41,7 +41,7 @@ int main() {
 
     }
     return 0;
-}*/
+}
 //3.3
 /*#include <iostream>
 #include <fstream>
