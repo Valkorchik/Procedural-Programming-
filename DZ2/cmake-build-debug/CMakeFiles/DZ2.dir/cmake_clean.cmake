@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DZ2.dir/Dz2.cpp.obj"
+  "CMakeFiles/DZ2.dir/Dz2.cpp.o"
   "DZ2.exe"
-  "DZ2.exe.manifest"
-  "DZ2.lib"
   "DZ2.pdb"
+  "libDZ2.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
