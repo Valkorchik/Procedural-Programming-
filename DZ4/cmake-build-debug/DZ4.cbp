@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug"/>
+				<Option working_dir="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug"/>
+				<Option working_dir="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DZ4">
-				<Option output="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug/DZ4.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug"/>
+				<Option output="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug/DZ4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -43,15 +43,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 DZ4"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 DZ4"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DZ4/fast">
-				<Option output="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug/DZ4.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug"/>
+				<Option output="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug/DZ4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -65,27 +65,27 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 DZ4/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 DZ4/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/GX701LV PR#3/CLionProjects/DZ4/cmake-build-debug"/>
+				<Option working_dir="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\CLionProjects\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\GX701LV PR#3\Documents\GitHub\Procedural-Programming-\DZ4\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/GX701LV PR#3/CLionProjects/DZ4/Dz4.cpp">
+		<Unit filename="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/Dz4.cpp">
 			<Option target="DZ4"/>
 		</Unit>
-		<Unit filename="C:/Users/GX701LV PR#3/CLionProjects/DZ4/CMakeLists.txt">
+		<Unit filename="C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
