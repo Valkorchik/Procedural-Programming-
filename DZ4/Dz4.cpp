@@ -146,7 +146,7 @@ int main()
 {
     bool prn_x=false;
     bool prn_y=false;
-    float epsn = 0.05;
+    float eps = 0.05;
     float y = 1.0;
     float step = M_PI/16;        // шаг приращения к аргументу
     while (y>=-1.1) {
@@ -168,7 +168,7 @@ int main()
     return 0;
 }*/
 //4.6
-/*#include <iostream>
+#include <iostream>
 #include <cmath>
 
 using namespace std;
@@ -235,15 +235,12 @@ int main()
 {
         converter();
         return 0;
-}*/
+}/*
 //4.7
 #include <iostream>
 #include <string>
 using namespace std;
-
-
-
-
+/*
 
 //4.9
 /*#include <iostream>
