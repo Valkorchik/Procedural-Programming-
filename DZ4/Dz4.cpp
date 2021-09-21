@@ -168,9 +168,8 @@ int main()
     return 0;
 }*/
 //4.6
-#include <iostream>
+/*#include <iostream>
 #include <cmath>
-
 using namespace std;
 
 void converter() {
@@ -235,12 +234,13 @@ int main()
 {
         converter();
         return 0;
-}/*
+}*/
 //4.7
+/*
 #include <iostream>
 #include <string>
 using namespace std;
-/*
+*/
 
 //4.9
 /*#include <iostream>
