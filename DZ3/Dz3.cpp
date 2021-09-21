@@ -14,7 +14,7 @@ int main()
     return 0;
 }*/
 //3.2
-/*#include <iostream>
+#include <iostream>
 #define USE_MATH_DEFINES
 #include <math.h>
 using namespace std;
@@ -41,7 +41,7 @@ int main() {
 
     }
     return 0;
-}*/
+}
 //3.3
 /*#include <iostream>
 #include <fstream>

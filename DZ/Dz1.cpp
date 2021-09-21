@@ -58,9 +58,11 @@ int main()
     cin >> b;
     cin >> c;
     d = pow(b, 2) * (-4 * a * c);
-    x3 = -(b / c);
+
     if (a == 0 and c!=0) {
+
         cout <<"Корень "<<x3;
+        x3 = -(b / c);
     }
     if (c==0){
         cout<<"Error";
