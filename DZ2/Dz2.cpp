@@ -8,7 +8,7 @@ int main()
 {
     cout<<"Enter nums"<<endl;
     cin>>r>>R>>h;
-    if (h,r,R>0){
+    if (h >0 and R>0 and r>0){
         l=sqrt((h*h+pow((R-r),2)));
         V = (M_PI * h * (pow(R, 2) + R * r + pow(r, 2)) / 3);
         S = M_PI * (pow(R, 2) + (R + r) * l + pow(r, 2));
@@ -39,7 +39,7 @@ int main()
             cout << abs(w);
         }
         else {
-            if (s < 0) {
+            if (a - pow(x, 2) < 0) {
                 cout << "error\n";
             }
             else {
@@ -73,7 +73,7 @@ int main()
 //2.4
 /*#include <iostream>
 using namespace std;
-int N,i,k;
+float N,i,k;
 int main()
 {
     cout<<"Enter number\n";

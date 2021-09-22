@@ -168,18 +168,15 @@ int main()
     return 0;
 }*/
 //4.6
-#include <iostream>
+/*#include <iostream>
 #include <cmath>
-
 using namespace std;
 
 void converter() {
     char buff[100];
-    char err[100];
     for (int i = 0; i < 100; i++) {
         buff[i] = NULL;
     }
-    int chetdef = 0;
     int chetchik = 0;
     cout << "Enter rim number\n";
     cin.getline(buff, 100);
@@ -217,8 +214,6 @@ void converter() {
             case 'M':
                 chetchik = chetchik + 1000;
                 break;
-            default: err[chetdef] = buff[i]; chetdef++;
-                break;
         }
 
     }
@@ -235,12 +230,38 @@ int main()
 {
         converter();
         return 0;
-}/*
+}*/
 //4.7
 #include <iostream>
-#include <string>
 using namespace std;
-/*
+int m,i,c,s;
+int Generator( int m,int i, int c)
+{
+    s+=1;
+    for (int k; k<100;k++) {
+         Generator(m, i, c);
+    }
+    return s=(m*s+i)%c;
+}
+int main()
+{
+    cout<<"Enter values for m,i,c \n";
+    cin>>m>>i>>c;
+    cout<<Generator(m,i,c)<<endl;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //4.9
 /*#include <iostream>
@@ -286,7 +307,7 @@ void translatoorCC()
         }
     }
     result = toSis(num10, resSis);
-    cout << "fine: " << result;
+    cout << "final: " << result;
 }
 int main()
 {
