@@ -232,44 +232,153 @@ int main()
         return 0;
 }*/
 //4.7
+/*
 #include <iostream>
 using namespace std;
-int m,i,c,s;
-int Generator( int m,int i, int c)
-{
-    s+=1;
-    for (int k; k<100;k++) {
-         Generator(m, i, c);
+int x, y, z;
+int main(){
+    cout << "Start number:\n";
+    cin >> x;
+    cout << "Choose generator(1,2).\n";
+    cin >> y;
+    cout << "Enter amount of numbers:\n";
+    cin >> z;
+    cout << "\n";
+    if (y == 1)
+    {
+    for (int i = 0; i < z; i++)
+    {
+    x = (37 * x + 3) % 64;
+    cout << x << " ";
     }
-    return s=(m*s+i)%c;
+    cout << "\n";
+    }
+    else if (y == 2)
+    {
+    for (int i = 0; i < z; i++)
+    {
+    x = (25173 * x + 13849) % 65537;
+    cout << x << " ";
+    }
+    cout << "\n";
+    }
+    else
+    {
+    cout << "Error" << "\n";
+    }
 }
+*/
+//4.8
+/*
+#include <iostream>
+using namespace std;
 int main()
 {
-    cout<<"Enter values for m,i,c \n";
-    cin>>m>>i>>c;
-    cout<<Generator(m,i,c)<<endl;
-
-
+    int a[3], b[3], c[3];
+    cout << "Amount of goods 1, sold by seller 1;\n";
+    cin >> a[0];
+    cout << "Amount of goods 2, sold by seller 1;\n";
+    cin >> a[1];
+    cout << "Amount of goods 3, sold by seller 1;\n";
+    cin >> a[2];
+    cout << "Amount of goods 4, sold by seller 1;\n";
+    cin >> a[3];
+    cout << "Amount of goods 1, sold by seller 2;\n";
+    cin >> b[0];
+    cout << "Amount of goods 2, sold by seller 2;\n";
+    cin >> b[1];
+    cout << "Amount of goods 3, sold by seller 2;\n";
+    cin >> b[2];
+    cout << "Amount of goods 4, sold by seller 2;\n";
+    cin >> b[3];
+    cout << "Amount of goods 1, sold by seller 3;\n";
+    cin >> c[0];
+    cout << "Amount of goods 2, sold by seller 3;\n";
+    cin >> c[1];
+    cout << "Amount of goods 3, sold by seller 3;\n";
+    cin >> c[2];
+    cout << "Amount of goods 4, sold by seller 3;\n";
+    cin >> c[3];
+    double t[3], k[3];
+    cout << "Cost 1;\n";
+    cin >> t[0];
+    cout << "Cost 2;\n";
+    cin >> t[1];
+    cout << "Cost 3;\n";
+    cin >> t[2];
+    cout << "Cost 4;\n";
+    cin >> t[3];
+    cout << "Commission 1;\n";
+    cin >> k[0];
+    cout << "Commission 2;\n";
+    cin >> k[1];
+    cout << "Commission 3;\n";
+    cin >> k[2];
+    cout << "Commission ;\n";
+    cin >> k[3];
+    cout << "\n\n";
+    double p1 = 0, p2 = 0, p3 = 0, d1 = 0, d2 = 0, d3 = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        p1 = p1 + (a[i] * t[i]);
+    }
+        for (int i = 0; i < 4; i++)
+    {
+        p2 = p2 + (b[i] * t[i]);
+    }
+        for (int i = 0; i < 4; i++)
+    {
+        p3 = p3 + (c[i] * t[i]);
+    }
+        for (int i = 0; i < 4; i++)
+    {
+        d1 = d1 + (a[i] * k[i]);
+    }
+        for (int i = 0; i < 4; i++)
+    {
+        d2 = d2 + (b[i] * k[i]);
+    }
+        for (int i = 0; i < 4; i++)
+    {
+        d3 = d3 + (c[i] * k[i]);
+    }
+        if (p1 > p2 && p1 > p3)
+    {
+        cout << "Most of the money got seller 1 " << "(" << p1 << ").\n\n";
+    }
+        else if (p2 > p1 && p2 > p3)
+    {
+        cout << "Most of the money got seller  2 " << "(" << p2 << ").\n\n";
+    }
+        else if (p3 > p2 && p3 > p1)
+    {
+        cout << "Most of the money got seller  3 " << "(" << p3 << ").\n\n";
+    }
+        if (d1 > d2 && d1 > d3)
+    {
+        cout << "The highest commission got seller 1 " << "(" << d1 << ").\n\n";
+    }
+        else if (d2 > d1 && d2 > d3)
+    {
+        cout << "The highest commission got seller 2 " << "(" << d2 << ").\n\n";
+    }
+        else if (d3 > d2 && d3 > d1)
+    {
+        cout << "The highest commission got seller 3 " << "(" << d3 << ").\n\n";
+    }
+        cout << "Total proceeds from goods sold " << (p1 + p2 + p3) << ".\n\n";
+        cout << "Total commissions received " << (d1 + d2 + d3) << ".\n\n";
+        cout << "Total amount of money that went through the sellers " << (p1 + p2 + p3 + d1 + d2 + d3) << ".\n\n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 //4.9
-/*#include <iostream>
+/*
+#include <iostream>
+#include <string>
 #include <cmath>
 using namespace std;
-
+int k=0;
 char simvols[32] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
-
 string toSis(int num, int Sis)
 {
     string resStr = "";
@@ -279,7 +388,8 @@ string toSis(int num, int Sis)
     }
     else
     {
-        resStr = toSis(num / Sis, Sis) + simvols[num % Sis];
+        cout<<"Error\n";
+        k+=1;
     }
     return resStr;
 }
@@ -307,9 +417,13 @@ void translatoorCC()
         }
     }
     result = toSis(num10, resSis);
+    if (k==1){
+        cout<<"-------------------------------------------------------------------\n\n";
+    }
+    else
     cout << "final: " << result;
 }
-int main()
 {
     translatoorCC();
-}*/
+}
+*/
