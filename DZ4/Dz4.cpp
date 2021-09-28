@@ -144,8 +144,6 @@ float func(float x) {
 }
 int main()
 {
-    bool prn_x=false;
-    bool prn_y=false;
     float eps = 0.05;
     float y = 1.0;
     float step = M_PI/16;        // шаг приращения к аргументу
@@ -372,7 +370,7 @@ int main()
 }
 */
 //4.9
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <cmath>
 using namespace std;
@@ -418,5 +416,5 @@ void translatoorSS()
 int main()
 {
     translatoorSS();
-}
+}*/
 

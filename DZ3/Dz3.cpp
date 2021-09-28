@@ -14,6 +14,7 @@ int main()
     return 0;
 }*/
 //3.2
+/*
 #include <iostream>
 #define USE_MATH_DEFINES
 #include <math.h>
@@ -41,7 +42,7 @@ int main() {
 
     }
     return 0;
-}
+}*/
 //3.3
 /*#include <iostream>
 #include <fstream>
