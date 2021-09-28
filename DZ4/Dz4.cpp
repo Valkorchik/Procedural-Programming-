@@ -23,10 +23,7 @@ int main() {
 /*#include <iostream>
 using namespace std;
 int x;
-
-int main()
-{
-    int sign(x);
+ int sign(x);
     {
         cin>>x;
         if (x>0)
@@ -41,10 +38,13 @@ int main()
             cout<<"Number has negative sign";
         }
     }
+int main()
+{
+    sign();
     return 0;
 }*/
 //4.3
-/*#include <iostream>
+/*#include <iostream> //Сделать все запросы через сами подфункции
 #define USE_MATH_DEFINES
 #include <cmath>
 using namespace std;
@@ -166,10 +166,9 @@ int main()
     return 0;
 }*/
 //4.6
-/*#include <iostream>
+/*#include <iostream> //Сделать проверку на IIII IIIV .....
 #include <cmath>
 using namespace std;
-
 void converter() {
     char buff[100];
     for (int i = 0; i < 100; i++) {
@@ -267,8 +266,7 @@ int main(){
 }
 */
 //4.8
-/*
-#include <iostream>
+/*#include <iostream>//Доделать, двумерный массив, таблицы должны быть совместными
 using namespace std;
 int main()
 {
