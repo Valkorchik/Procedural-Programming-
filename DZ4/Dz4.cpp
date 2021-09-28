@@ -376,16 +376,11 @@ int main()
 #include <string>
 #include <cmath>
 using namespace std;
-int k=0,z=0;
+int k=0;
 char simvols[32] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
 string toSS(int num, int SS)
 {
-    string res= to_string(num);
     string newStr = "";
-    for (auto SS :  res)
-    {
-        k+=1;
-    }
     if (num < SS)
     {
         newStr += simvols[num];
@@ -418,10 +413,6 @@ void translatoorSS()
         }
     }
     result = toSS(num10, newSS);
-    if (k==1){
-        cout<<"-------------------------------------------------------------------\n\n";
-    }
-    else
     cout << "Final: " << result;
 }
 int main()
