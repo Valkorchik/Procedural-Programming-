@@ -258,7 +258,7 @@ int main(){
     for (int i = 0; i < z; i++)
     {
     x = (25173 * x + 13849) % 65537;
-    cout << x << " ";
+    cout << x << " "<<endl;
     }
     cout << "\n";
     }
@@ -372,58 +372,60 @@ int main()
 }
 */
 //4.9
-/*
 #include <iostream>
 #include <string>
 #include <cmath>
 using namespace std;
-int k=0;
+int k=0,z=0;
 char simvols[32] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
-string toSis(int num, int Sis)
+string toSS(int num, int SS)
 {
-    string resStr = "";
-    if (num < Sis)
+    string res= to_string(num);
+    string newStr = "";
+    for (auto SS :  res)
     {
-        resStr += simvols[num];
+        k+=1;
+    }
+    if (num < SS)
+    {
+        newStr += simvols[num];
     }
     else
     {
-        cout<<"Error\n";
-        k+=1;
+        newStr = toSS(num / SS, SS) + simvols[num % SS];
     }
-    return resStr;
+
+    return newStr;
 }
-void translatoorCC()
+void translatoorSS()
 {
-    string num;
-    string result;
-    int num10 = 0;
-    int numSis = 0;
-    int resSis;
-    cout << "number: ";
+    string num,result;
+    int newSS,num10 = 0, numSS=0;
+    cout << "Enter your number: ";
     cin >> num;
-    cout << "ss: ";
-    cin >> numSis;
-    cout << "new ss: ";
-    cin >> resSis;
-    for (int i = num.size() - 1; i >= 0; i--)
+    cout << "Enter SS: ";
+    cin >> numSS;
+    cout << "Enter new SS: ";
+    cin >> newSS;
+    for (int i = num.length() - 1; i >= 0; i--)
     {
-        for (int numSim = 0; numSim < numSis; numSim++)
+        for (int numSim = 0; numSim < numSS; numSim++)
         {
             if (num[i] == simvols[numSim])
             {
-                num10 += numSim * pow(numSis, (num.size() - i) - 1);
+                num10 += numSim * pow(numSS, (num.length() - i) - 1);
             }
         }
     }
-    result = toSis(num10, resSis);
+    result = toSS(num10, newSS);
     if (k==1){
         cout<<"-------------------------------------------------------------------\n\n";
     }
     else
-    cout << "final: " << result;
+    cout << "Final: " << result;
 }
+int main()
 {
-    translatoorCC();
+    translatoorSS();
 }
-*/
+
