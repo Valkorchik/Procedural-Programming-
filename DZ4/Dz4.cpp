@@ -50,38 +50,41 @@ int main()
 using namespace std;
 int n;
 double R, a, b, c;
-double CircleArea (double R)
+double CircleArea ()
 {
-    return 3.14*R*R;
+    cout << "Enter radius\n";
+    cin >> R;
+    cout << "The square of circle equals " << 3.14*R*R;
+    return 0;
 }
-double RectangleArea (double a, double b)
+double RectangleArea ()
 {
-    return a*b;
+    cout << "Enter 'a' and 'b' sides\n";
+    cin >> a >> b;
+    cout << "The area of rectangle equals " << a*b;
+    return 0;
 }
-double TriangleArea (double a, double b, double c)
+double TriangleArea ()
 {
+    cout << "Enter 'a' , 'b' and 'c' sides\n";
+    cin >> a >> b>>c;
     double p;
     p=(a+b+c)/2;
-    return sqrt(p*(p-a)*(p-b)*(p-c));
+    cout << "The area of triangle equals " << sqrt(p*(p-a)*(p-b)*(p-c));
+    return 0;
 }
 int main() {
     cout << "Choose which figure do you want to calculate: 1-rectangle, 2-triangle or 3-circle\n";
     cin >> n;
     switch (n) {
         case 1:
-            cout << "Enter 'a' and 'b' sides\n";
-            cin >> a >> b;
-            cout << "The area of rectangle equals " << RectangleArea(a,b)<<endl;
+            RectangleArea();
             break;
         case 2:
-            cout << "Enter 'a' , 'b' and 'c' sides\n";
-            cin >> a >> b>>c;
-            cout << "The area of triangle equals " << TriangleArea(a,b,c)<<endl;
+            TriangleArea();
             break;
         case 3:
-            cout << "Enter radius\n";
-            cin >> R;
-            cout << "The square of circle equals " << CircleArea(R);
+            CircleArea();
             break;
     }
 }*/
