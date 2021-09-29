@@ -44,7 +44,7 @@ int main()
     return 0;
 }*/
 //4.3
-/*#include <iostream> //Сделать все запросы через сами подфункции
+/*#include <iostream> //Сделано
 #define USE_MATH_DEFINES
 #include <cmath>
 using namespace std;
@@ -169,9 +169,11 @@ int main()
     return 0;
 }*/
 //4.6
-/*#include <iostream> //Сделать проверку на IIII IIIV .....
+/*#include <iostream> //Сделано
 #include <cmath>
+#include <cstring>
 using namespace std;
+int k=0;
 void converter() {
     char buff[100];
     for (int i = 0; i < 100; i++) {
@@ -180,33 +182,61 @@ void converter() {
     int chetchik = 0;
     cout << "Enter rim number\n";
     cin.getline(buff, 100);
-    for (int i = 0; i < 100; i++)
-    {
+    for (int i = 0; i < 100; i++) {
         if (buff[i] == NULL) continue;
         switch (buff[i]) {
             case 'I':
-                if (i + 1 < strlen(buff) && (buff[i + 1] == 'V' || buff[i + 1] == 'X' || buff[i + 1] == 'C')) {
+                if (i + 1 < strlen(buff) && (buff[i + 1] == 'V' || buff[i + 1] == 'X')) {
                     chetchik = chetchik - 1;
+                }
+                if (buff[i + 1] == 'I' && buff[i + 2] == 'I' && buff[i + 3] == 'I')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if ((buff[i + 1] == 'I' && buff[i + 2] == 'I') && (buff[i + 3] == 'V' || buff[i + 3] == 'X' || buff[i + 3] == 'C'))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'C')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
                 }
                 else chetchik = chetchik + 1;
                 break;
             case 'V':
+                if (buff[i + 1] == 'C')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                else
                 chetchik = chetchik + 5;
                 break;
             case 'X':
                 if (i + 1 < strlen(buff) && (buff[i + 1] == 'L' || buff[i + 1] == 'C' || buff[i + 1] == 'M')) {
                     chetchik = chetchik - 10;
-                }
-                else chetchik = chetchik + 10;
+                } else chetchik = chetchik + 10;
                 break;
             case 'L':
+                if (buff[i + 1] == 'C')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
                 chetchik = chetchik + 50;
                 break;
             case 'C':
                 if (i + 1 < strlen(buff) && (buff[i + 1] == 'D' || buff[i + 1] == 'M')) {
                     chetchik = chetchik - 100;
-                }
-                else chetchik = chetchik + 100;
+                } else chetchik = chetchik + 100;
                 break;
             case 'D':
                 chetchik = chetchik + 500;
@@ -218,7 +248,11 @@ void converter() {
 
     }
     cout << endl;
-    if (chetchik == 0) {
+    if (k >= 1)
+    {
+        cout<<"-------------------------";
+    }
+    else if (chetchik == 0) {
         cout << "You didnt write number" << endl;
     }
     else {
@@ -269,77 +303,77 @@ int main(){
 }
 */
 //4.8
-/*#include <iostream>//Доделать, двумерный массив, таблицы должны быть совместными
+/*#include <iostream>//Сделано
 using namespace std;
 int main()
 {
-    int a[3], b[3], c[3];
+    int a[3][4];
     cout << "Amount of goods 1, sold by seller 1;\n";
-    cin >> a[0];
+    cin >> a[0][0];
     cout << "Amount of goods 2, sold by seller 1;\n";
-    cin >> a[1];
+    cin >> a[0][1];
     cout << "Amount of goods 3, sold by seller 1;\n";
-    cin >> a[2];
+    cin >> a[0][2];
     cout << "Amount of goods 4, sold by seller 1;\n";
-    cin >> a[3];
+    cin >> a[0][3];
     cout << "Amount of goods 1, sold by seller 2;\n";
-    cin >> b[0];
+    cin >> a[1][0];
     cout << "Amount of goods 2, sold by seller 2;\n";
-    cin >> b[1];
+    cin >> a[1][1];
     cout << "Amount of goods 3, sold by seller 2;\n";
-    cin >> b[2];
+    cin >> a[1][2];
     cout << "Amount of goods 4, sold by seller 2;\n";
-    cin >> b[3];
+    cin >> a[1][3];
     cout << "Amount of goods 1, sold by seller 3;\n";
-    cin >> c[0];
+    cin >> a[2][0];
     cout << "Amount of goods 2, sold by seller 3;\n";
-    cin >> c[1];
+    cin >> a[2][1];
     cout << "Amount of goods 3, sold by seller 3;\n";
-    cin >> c[2];
+    cin >> a[2][2];
     cout << "Amount of goods 4, sold by seller 3;\n";
-    cin >> c[3];
-    double t[3], k[3];
+    cin >> a[2][3];
+   double b[4][2];
     cout << "Cost 1;\n";
-    cin >> t[0];
+    cin >> b[0][0];
     cout << "Cost 2;\n";
-    cin >> t[1];
+    cin >> b[1][0];
     cout << "Cost 3;\n";
-    cin >> t[2];
+    cin >> b[2][0];
     cout << "Cost 4;\n";
-    cin >> t[3];
+    cin >> b[3][0];
     cout << "Commission 1;\n";
-    cin >> k[0];
+    cin >> b[0][1];
     cout << "Commission 2;\n";
-    cin >> k[1];
+    cin >> b[1][1];
     cout << "Commission 3;\n";
-    cin >> k[2];
+    cin >> b[2][1];
     cout << "Commission ;\n";
-    cin >> k[3];
+    cin >> b[3][1];
     cout << "\n\n";
     double p1 = 0, p2 = 0, p3 = 0, d1 = 0, d2 = 0, d3 = 0;
     for (int i = 0; i < 4; i++)
     {
-        p1 = p1 + (a[i] * t[i]);
+        p1 = p1 + (a[0][i] * b[i][0]);
     }
         for (int i = 0; i < 4; i++)
     {
-        p2 = p2 + (b[i] * t[i]);
+        p2 = p2 + (a[1][i] * b[i][0]);
     }
         for (int i = 0; i < 4; i++)
     {
-        p3 = p3 + (c[i] * t[i]);
+        p3 = p3 + (a[2][i] * b[i][0]);
     }
         for (int i = 0; i < 4; i++)
     {
-        d1 = d1 + (a[i] * k[i]);
+        d1 = d1 + (a[0][i] * b[i][1]);
     }
         for (int i = 0; i < 4; i++)
     {
-        d2 = d2 + (b[i] * k[i]);
+        d2 = d2 + (a[1][i] * b[i][1]);
     }
         for (int i = 0; i < 4; i++)
     {
-        d3 = d3 + (c[i] * k[i]);
+        d3 = d3 + (a[2][i] * b[i][1]);
     }
         if (p1 > p2 && p1 > p3)
     {
