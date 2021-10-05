@@ -44,24 +44,32 @@ int main()
     return 0;
 }*/
 //4.3
-/*#include <iostream> //Сделано
+#include <iostream> //Сделано
 #define USE_MATH_DEFINES
 #include <cmath>
 using namespace std;
 int n;
-double R, a, b, c;
+double R, a, b, c,S1,S2,S3;
 double CircleArea ()
 {
     cout << "Enter radius\n";
     cin >> R;
-    cout << "The square of circle equals " << 3.14*R*R;
+    S1=3.14*R*R;
+    if (S1>=0)
+     cout << "The square of circle equals " << S1;
+    else
+        cout<<"Error";
     return 0;
 }
 double RectangleArea ()
 {
     cout << "Enter 'a' and 'b' sides\n";
     cin >> a >> b;
-    cout << "The area of rectangle equals " << a*b;
+    S2=a*b;
+    if (S2>=0)
+        cout << "The area of rectangle equals " << S2;
+    else
+        cout<<"Error";
     return 0;
 }
 double TriangleArea ()
@@ -70,7 +78,11 @@ double TriangleArea ()
     cin >> a >> b>>c;
     double p;
     p=(a+b+c)/2;
-    cout << "The area of triangle equals " << sqrt(p*(p-a)*(p-b)*(p-c));
+    S3=sqrt(p*(p-a)*(p-b)*(p-c));
+    if (S3>=0)
+        cout << "The area of triangle equals " << S3;
+    else
+        cout<<"Error";
     return 0;
 }
 int main() {
@@ -87,7 +99,7 @@ int main() {
             CircleArea();
             break;
     }
-}*/
+}
 //4.4
 /*#include <iostream>
 using namespace std;
