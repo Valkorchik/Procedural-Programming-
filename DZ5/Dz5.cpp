@@ -1,74 +1,60 @@
 //Алгоритм Евклида
-/*
-
-#include<iostream>
+/*#include<iostream>
 using namespace std;
-
-
-int NOD(int x, int y)
-{
-	int i;
-	while (x && y)
-		if (x >= y) x %= y;
-		else y %= x;
-	return x | y;
+int Nod1(int x, int y) {
+    while (x!=0 && y!=0)
+        if (x >= y)
+            x %= y;
+        else y %= x;
+    return x + y;
 }
+int Nod2(int x, int y) {
+    while (x != y)
+        if (x > y)
+            x -= y;
+        else y -= x;
+    return x;
 
+}
 int main()
 {
-	setlocale(0, "");
-	int  x, y;
-	cout << "Первое число: ";
-	cin >> x;
-	cout << "Второе число: ";
-	cin >> y;
-	cout << "NOD -> " << NOD(x, y) << endl;
-
-
-	system("pause");
-	return 0;
+    int  x, y;
+    cout << "First number: ";
+    cin >> x;
+    cout << "Second number: ";
+    cin >> y;
+    cout << "Nod1 =  " << Nod1(x, y) << endl;
+    cout << "Nod2 =  " << Nod2(x, y);
+    return 0;
+}*/
+//Решето
+/*#include <iostream>
+using namespace std;
+int i,k=0;
+int main()
+{
+    cout<<"Enter natural number: "<<endl;
+    cin>>i;
+    if ((i<=0) or (i!=int(i)))
+    {
+        cout<<"Number must be natural";
+        return 0;
+    }
+    else {
+        for (int j = 2; j < i; j++) {
+            if ((j<=0) or (j!=int(j))) continue;
+            else
+            {
+                k+=1;
+                cout<<"Number "<<k<<"- "<<j<<endl;
+            }
+        }
+    }
 }
 */
 
-//Ханойская башня
-/*
 
-#include <iostream>
-
-using namespace std;
-
-void hanoi_towers(int quantity, int from, int to, int buf_peg)	//quantity-число колец, from-начальное положение колец(1-3),to-конечное положение колец(1-3)
-{								//buf_peg - промежуточный колышек(1-3)
-	if (quantity != 0)
-	{
-		hanoi_towers(quantity-1, from, buf_peg, to);
-
-		cout << from << " -> " << to << endl;
-
-		hanoi_towers(quantity-1, buf_peg, to, from);
-	}
-}
-
-int main()
-{
-		setlocale(LC_ALL,"rus");
-	int start_peg, destination_peg, buffer_peg, plate_quantity;
-
-	start_peg = 1;
-
-	destination_peg = 3;
-
-	buffer_peg = 2;
-
-	cout << "Количество дисков:" << endl;
-	cin >> plate_quantity;
-
-	hanoi_towers(plate_quantity, start_peg, destination_peg, buffer_peg);
-	system("pause");
-return 0;
-}
-*/
-
+/////////////
 // Решето
 
 /*
@@ -77,7 +63,6 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "RU");
 	int n;
 	cout << "Введите число" << endl;
 	cin >> n;
@@ -97,7 +82,6 @@ int main()
 	cin.get();
 }
 */
-
 
 
 //Сортировка
