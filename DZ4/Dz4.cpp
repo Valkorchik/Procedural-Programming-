@@ -44,7 +44,7 @@ int main()
     return 0;
 }*/
 //4.3
-#include <iostream> //Сделано
+/*#include <iostream> //Сделано
 #define USE_MATH_DEFINES
 #include <cmath>
 using namespace std;
@@ -82,7 +82,7 @@ double TriangleArea ()
     if (S3>=0)
         cout << "The area of triangle equals " << S3;
     else
-        cout<<"Error";
+        cout<<"Er"
     return 0;
 }
 int main() {
@@ -99,7 +99,7 @@ int main() {
             CircleArea();
             break;
     }
-}
+}*/
 //4.4
 /*#include <iostream>
 using namespace std;
