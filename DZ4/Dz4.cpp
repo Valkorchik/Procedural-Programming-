@@ -201,6 +201,11 @@ void converter() {
                 if (i + 1 < strlen(buff) && (buff[i + 1] == 'V' || buff[i + 1] == 'X')) {
                     chetchik = chetchik - 1;
                 }
+                if (buff[i + 1] == 'X')
+                {
+                    chetchik = chetchik - 1;
+                }
+
                 if (buff[i + 1] == 'I' && buff[i + 2] == 'I' && buff[i + 3] == 'I')
                 {
                     cout<<"Error\n";
