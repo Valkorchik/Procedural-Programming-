@@ -52,6 +52,56 @@ int main()
     }
 }
 */
+//Обработка текстовых файлов
+//№21
+#include <iostream>
+using namespace std;
+int main()
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /////////////
@@ -82,77 +132,8 @@ int main()
 	cin.get();
 }
 */
-
-
-//Сортировка
-
+//Шарики
 /*
-#include <iostream>
-
-using namespace std;
-
-int main() {
-	setlocale(LC_ALL, "rus");
-
-	int a[10]; // объявили массив на 10 ячеек
-
-	cout << "Введите 10 чисел для заполнения массива: " << endl;
-
-	for (int i = 0; i < 10; i++) {
-		cin >> a[i]; // "читаем" элементы в массив
-	}
-
-
-
-
-	for (int i = 0; i < 10; ++i)
-	for (int j = (i & 1) ? 1 : 2; j < 10; j += 2)
-		if (a[j - 1] > a[j])
-			swap(a[j - 1], a[j]);
-
-	cout << "Массив в отсортированном виде: ";
-
-	for (int i = 0; i < 10; i++) {
-		cout << a[i] << " "; // выводим элементы массива
-	}
-	system("pause");
-	return 0;
-}
-*/
-
-
-
-
-
-
-
-//5
-/*
-#include <iostream>
-#include <vector>
-using namespace std;
-int main()
-{
-	setlocale(LC_ALL, "Russian");
-	int n, k;
-	cout << "Введите количество свободных мест: ";
-	cin >> n;
-	cout << "Введите количество школьников: ";
-	cin >> k;
-	while (k != 1) {
-		n = (n - k % 2) / 2;
-		k /= 2;
-	}
-	cout << "Остаток мест слева/справа \n -> " << (n - 1) / 2 << " \n -> " << n / 2 << endl;
-}
-*/
-
-
-
-/*
-
-
-
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -191,7 +172,6 @@ int main()
 	}
 	while (next_permutation(vector.begin(), vector.end()));
 	cout << "Количество подходящих вариаций ->" << count << endl;
-	system("pause");
 	return 0;
 }
 
