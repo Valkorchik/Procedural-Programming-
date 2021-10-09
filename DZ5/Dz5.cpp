@@ -54,12 +54,87 @@ int main()
 */
 //Обработка текстовых файлов
 //№21
-#include <iostream>
+/*#include <iostream>
+#include <fstream>
 using namespace std;
 int main()
 {
+    string s,sr;
+    ifstream fin("E:\\Work\\GitHub\\Procedural-Programming-\\DZ5\\21-22.txt");
+    getline(fin,s);
+    double max_chast=0;
+    double kol_b=0;
+    for(int i=0;i<s.length();i++){
+        if((s[i]>='A' && s[i]<='Z')||
+        (s[i]>='a' && s[i]<='z'))
+            kol_b ++;               //всего букв
+    }
+    char a[12]={'a','e','i','u','y','o','A','E','I','U','Y','O'};
+    double kol_bukvi=0;
+    int number;
+    for(int i=0;i<12;i++){
+        kol_bukvi=0;
+        for (int j=0;j<s.length();j++){
+            if(a[i]==s[j])
+            {
+                kol_bukvi ++;
+            }
+        }
+        if(max_chast<kol_bukvi/kol_b)
+        {
+            max_chast=kol_bukvi/kol_b;
+            number=i;
+        }
+    }
+    cout<<"The most frequent letter is '"<<a[number]<<"'.";
+    return 0;
+}*/
+//22
+/*#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+double min_chast=1000.0;
+int main()
+{
+    string s,sr;
+    ifstream fin("E:\\Work\\GitHub\\Procedural-Programming-\\DZ5\\21-22.txt");
+    getline(fin,s);
+    double max_chast=0;
+    double chast;
+    double kol_b=0;
+    for(int i=0;i<s.length();i++){
+        if((s[i]>='A' && s[i]<='Z')||
+           (s[i]>='a' && s[i]<='z'))
+            kol_b ++;               //всего букв
+    }
+    char a[12]={'a','e','i','u','y','o','A','E','I','U','Y','O'};
+    double kol_bukvi=0;
+    int number;
+    for(int i=0;i<12;i++)
+    {
+        kol_bukvi=0;
+        for (int j=0;j<s.length();j++)
+        {
+            if(a[i]==s[j])
+            {
+                kol_bukvi ++;
+            }
+        }
+        if(kol_bukvi!=0)
+        {
+            chast=kol_bukvi/kol_b;
+            if(chast<=min_chast)
+            {
+                min_chast=chast;
+                number=i;
+            }
+        }
+    }
+    cout<<"The most non frequent letter is '"<<a[number]<<"'.";
+    return 0;
+}*/
 
-}
 
 
 

@@ -233,6 +233,12 @@ void converter() {
                     k+=1;
                     break;
                 }
+                if (buff[i + 1] == 'V' || (buff[i + 1] == 'V' && buff[i + 2] == 'V'))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
                 else
                 chetchik = chetchik + 5;
                 break;
