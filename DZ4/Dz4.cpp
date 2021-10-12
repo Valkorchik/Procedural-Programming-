@@ -181,7 +181,7 @@ int main()
     return 0;
 }*/
 //4.6
-/*#include <iostream> //Сделано
+#include <iostream> //Сделано
 #include <cmath>
 #include <cstring>
 using namespace std;
@@ -205,7 +205,18 @@ void converter() {
                 {
                     chetchik = chetchik - 1;
                 }
-
+                if (buff[i + 1] == 'I' && buff[i + 2] == 'I' && buff[i + 3] == 'V')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'V' && buff[i + 2] == 'I')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
                 if (buff[i + 1] == 'I' && buff[i + 2] == 'I' && buff[i + 3] == 'I')
                 {
                     cout<<"Error\n";
@@ -218,7 +229,7 @@ void converter() {
                     k+=1;
                     break;
                 }
-                if (buff[i + 1] == 'C')
+                if (buff[i + 1] == 'C' || (buff[i + 1] == 'D') || buff[i + 1] == 'M' || buff[i + 1] == 'L')
                 {
                     cout<<"Error\n";
                     k+=1;
@@ -227,7 +238,7 @@ void converter() {
                 else chetchik = chetchik + 1;
                 break;
             case 'V':
-                if (buff[i + 1] == 'C')
+                if ((buff[i + 1] == 'V') || (buff[i + 1] == 'C') || (buff[i + 1] == 'X') || (buff[i + 1] == 'L') || (buff[i + 1] == 'D') || (buff[i + 1] == 'M'))
                 {
                     cout<<"Error\n";
                     k+=1;
@@ -239,16 +250,35 @@ void converter() {
                     k+=1;
                     break;
                 }
+                if (buff[i + 1] == 'X' || buff[i + 1] == 'C' || (buff[i + 1] == 'D') || buff[i + 1] == 'M' || buff[i + 1] == 'L')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
                 else
                 chetchik = chetchik + 5;
                 break;
             case 'X':
                 if (i + 1 < strlen(buff) && (buff[i + 1] == 'L' || buff[i + 1] == 'C' || buff[i + 1] == 'M')) {
                     chetchik = chetchik - 10;
-                } else chetchik = chetchik + 10;
+                }
+                if ((buff[i+1]=='X') && (buff[i+2]=='X'))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'M' || buff[i + 1] == 'V' || (buff[i + 1] == 'D') ||buff[i + 1] == 'L')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                else chetchik = chetchik + 10;
                 break;
             case 'L':
-                if (buff[i + 1] == 'C')
+                if ((buff[i + 1] == 'C') || (buff[i + 1] == 'L') || (buff[i + 1] == 'D') || (buff[i + 1] == 'M'))
                 {
                     cout<<"Error\n";
                     k+=1;
@@ -259,12 +289,34 @@ void converter() {
             case 'C':
                 if (i + 1 < strlen(buff) && (buff[i + 1] == 'D' || buff[i + 1] == 'M')) {
                     chetchik = chetchik - 100;
-                } else chetchik = chetchik + 100;
+
+                }
+                if((buff[i + 2] == 'C') && ((buff[i + 3] == 'C')))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                else chetchik = chetchik + 100;
                 break;
             case 'D':
-                chetchik = chetchik + 500;
+                if (buff[i + 1] == 'D' || (buff[i + 1] == 'L') || (buff[i + 1] == 'M'))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                else {
+                    chetchik = chetchik + 500;
+                }
                 break;
             case 'M':
+                if ((buff[i + 1] == 'M') && (buff[i + 2] == 'M'))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
                 chetchik = chetchik + 1000;
                 break;
         }
@@ -287,7 +339,7 @@ int main()
 {
         converter();
         return 0;
-}*/
+}
 //4.7
 /*
 #include <iostream>

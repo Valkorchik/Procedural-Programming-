@@ -136,14 +136,50 @@ int main()
 }*/
 //Ряды
 //21
-#include <iostream>
+/*#include <iostream>
 #include <string>
+#include <math.h>
+#define USE_MATH_DEFINES
 using namespace std;
-int n,k;
-string s;
+int l,n,k,num10;
+string s,result,newStr = "";
 char simvols[30] = {'2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
-
+char sim[4] = { '0','1','2','3'};
 int a[100];
+int b[100];
+string toSS(int num, int SS)
+{
+    if (num < SS)
+    {
+        newStr += sim[num];
+    }
+    else
+    {
+        newStr = toSS(num / SS, SS) + sim[num % SS];
+    }
+    return newStr;
+}
+void Transfer()
+{
+    cout<<"Massive after transfer equals: \n";
+    for (int i=0;i<k;i++) {
+        s = to_string(a[i]);
+        for (int i = s.length() - 1; i >= 0; i--) {
+            for (int numSim = 0; numSim < 2; numSim++) {
+                if (s[i] == sim[numSim]) {
+                    num10 += numSim * pow(2, (s.length() - i) - 1);
+                }
+            }
+        }
+        result=toSS(num10, 3);
+        num10=0;
+        b[i]=stoi(result);
+        result="";
+        newStr="";
+        l+=1;
+        cout<<l<<") "<<b[i]<<endl;
+    }
+}
 int main()
 {
     cout<<"How many numbers do you want to transform into ternary numeral system?"<<endl;
@@ -152,72 +188,21 @@ int main()
     for (int i=0; i<k;i++)
     {
         cin >> n;
-        s+= to_string(n);
-        s+=" ";
-        cout<<s<<endl;
-        for (int j=0;j<s.size();j++)
-        {
-            if((simvols[j]==s[j])||(simvols[j+1]==s[j])
-            ||(simvols[j+2]==s[j]) |(simvols[j+3]==s[j]))
-            {
-                cerr << "Error. Cant use non binary number here;";
-                return 0;
+        s=to_string(n);
+        for (int j = 0; j < 30; j++) {
+            for (int z = 0; z < s.length(); z++) {
+                if (simvols[j] == s[z]) {
+                    cerr << "Error. Cant use non binary number here;";
+                    return 0;
+                }
             }
         }
-        a[i]=n;
-       // cout << a[i] << endl;
-
+        a[i] = n;
     }
-
+    Transfer();
     return 0;
-}
-/*#include <iostream>
-#include <string>
-#include <cmath>
-using namespace std;
-int k=0;
-char simvols[32] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
-string toSS(int num, int SS)
-{
-    string newStr = "";
-    if (num < SS)
-    {
-        newStr += simvols[num];
-    }
-    else
-    {
-        newStr = toSS(num / SS, SS) + simvols[num % SS];
-    }
-
-    return newStr;
-}
-void translatoorSS()
-{
-    string num,result;
-    int newSS,num10 = 0, numSS=0;
-    cout << "Enter your number: ";
-    cin >> num;
-    cout << "Enter SS: ";
-    cin >> numSS;
-    cout << "Enter new SS: ";
-    cin >> newSS;
-    for (int i = num.length() - 1; i >= 0; i--)
-    {
-        for (int numSim = 0; numSim < numSS; numSim++)
-        {
-            if (num[i] == simvols[numSim])
-            {
-                num10 += numSim * pow(numSS, (num.length() - i) - 1);
-            }
-        }
-    }
-    result = toSS(num10, newSS);
-    cout << "Final: " << result;
-}
-int main()
-{
-    translatoorSS();
 }*/
+//22
 
 
 
