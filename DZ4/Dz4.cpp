@@ -305,6 +305,11 @@ void converter() {
                 if (i + 1 < strlen(buff) && (buff[i + 1] == 'L' || buff[i + 1] == 'C' || buff[i + 1] == 'M')) {
                     chetchik = chetchik - 10;
                 }
+                if (buff[i+1]=='I' && buff[i+2]=='V' )
+                {
+                    chetchik = chetchik - 1;
+
+                }
                 if ((buff[i+1]=='X') && (buff[i+2]=='X')  && (buff[i+3]=='X'))
                 {
                     cout<<"Error\n";
@@ -333,7 +338,12 @@ void converter() {
                     chetchik = chetchik - 100;
 
                 }
-                if((buff[i + 2] == 'C') && ((buff[i + 3] == 'C')))
+                if (buff[i+1]=='I' && buff[i+2]=='V' )
+                {
+                    chetchik = chetchik - 1;
+
+                }
+                if((buff[i + 1] == 'C') && (buff[i + 2] == 'C')&& (buff[i + 3] == 'C'))
                 {
                     cout<<"Error\n";
                     k+=1;
@@ -342,7 +352,7 @@ void converter() {
                 else chetchik = chetchik + 100;
                 break;
             case 'D':
-                if (buff[i + 1] == 'D' || (buff[i + 1] == 'L') || (buff[i + 1] == 'M'))
+                if (buff[i + 1] == 'D' || (buff[i + 1] == 'L'))
                 {
                     cout<<"Error\n";
                     k+=1;
@@ -353,12 +363,28 @@ void converter() {
                 }
                 break;
             case 'M':
-                if ((buff[i + 1] == 'M') && (buff[i + 2] == 'M'))
+                if ((buff[i + 1] == 'M') && (buff[i + 2] == 'M')&& (buff[i + 3] == 'M'))
                 {
                     cout<<"Error\n";
                     k+=1;
                     break;
                 }
+                if (buff[i+1]=='X' && buff[i+2]=='L' )
+                {
+                    chetchik = chetchik - 10;
+
+                }
+                if (buff[i+1]=='C' && buff[i+2]=='M' )
+                {
+                    chetchik = chetchik - 10;
+
+                }
+                if ( buff[i+3]=='L'&& buff[i+4]=='X'&& buff[i+5]=='X'&& buff[i+6]=='I'&& buff[i+7]=='I'&& buff[i+8]=='I' )
+                {
+                    chetchik = chetchik - 90;
+
+                }
+
                 chetchik = chetchik + 1000;
                 break;
         }
