@@ -211,6 +211,30 @@ void converter() {
                     k+=1;
                     break;
                 }
+                if (buff[i + 1] == 'I' && buff[i + 2] == 'X' && buff[i + 3] == 'I')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'I' && buff[i + 2] == 'I' && buff[i + 3] == 'X')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'X' && buff[i + 2] == 'I')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'I' && buff[i + 2] == 'X')
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
                 if (buff[i + 1] == 'V' && buff[i + 2] == 'I')
                 {
                     cout<<"Error\n";
@@ -245,6 +269,12 @@ void converter() {
                     break;
                 }
                 if (buff[i + 1] == 'V' || (buff[i + 1] == 'V' && buff[i + 2] == 'V'))
+                {
+                    cout<<"Error\n";
+                    k+=1;
+                    break;
+                }
+                if (buff[i + 1] == 'I' && (buff[i + 2] == 'V' || (buff[i + 2] == 'I' && buff[i + 3] == 'V') ))
                 {
                     cout<<"Error\n";
                     k+=1;
