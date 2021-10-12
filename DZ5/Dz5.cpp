@@ -134,6 +134,90 @@ int main()
     cout<<"The most non frequent letter is '"<<a[number]<<"'.";
     return 0;
 }*/
+//Ряды
+//21
+#include <iostream>
+#include <string>
+using namespace std;
+int n,k;
+string s;
+char simvols[30] = {'2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
+
+int a[100];
+int main()
+{
+    cout<<"How many numbers do you want to transform into ternary numeral system?"<<endl;
+    cin>>k;
+    cout<<"Now enter binary numbe(r/s)"<<endl;
+    for (int i=0; i<k;i++)
+    {
+        cin >> n;
+        s+= to_string(n);
+        s+=" ";
+        cout<<s<<endl;
+        for (int j=0;j<s.size();j++)
+        {
+            if((simvols[j]==s[j])||(simvols[j+1]==s[j])
+            ||(simvols[j+2]==s[j]) |(simvols[j+3]==s[j]))
+            {
+                cerr << "Error. Cant use non binary number here;";
+                return 0;
+            }
+        }
+        a[i]=n;
+       // cout << a[i] << endl;
+
+    }
+
+    return 0;
+}
+/*#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+int k=0;
+char simvols[32] = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
+string toSS(int num, int SS)
+{
+    string newStr = "";
+    if (num < SS)
+    {
+        newStr += simvols[num];
+    }
+    else
+    {
+        newStr = toSS(num / SS, SS) + simvols[num % SS];
+    }
+
+    return newStr;
+}
+void translatoorSS()
+{
+    string num,result;
+    int newSS,num10 = 0, numSS=0;
+    cout << "Enter your number: ";
+    cin >> num;
+    cout << "Enter SS: ";
+    cin >> numSS;
+    cout << "Enter new SS: ";
+    cin >> newSS;
+    for (int i = num.length() - 1; i >= 0; i--)
+    {
+        for (int numSim = 0; numSim < numSS; numSim++)
+        {
+            if (num[i] == simvols[numSim])
+            {
+                num10 += numSim * pow(numSS, (num.length() - i) - 1);
+            }
+        }
+    }
+    result = toSS(num10, newSS);
+    cout << "Final: " << result;
+}
+int main()
+{
+    translatoorSS();
+}*/
 
 
 
