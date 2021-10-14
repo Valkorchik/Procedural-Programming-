@@ -23,21 +23,22 @@ int main() {
 /*#include <iostream>
 using namespace std;
 int x;
- int sign(x);
+void sign()
+{
+    cin>>x;
+    if (x>0)
     {
-        cin>>x;
-        if (x>0)
-        {
-            cout<<"Number has positive sign";
-        }
-        if (x==0)
-        {
-            cout<<"Number is zero";
-        }
-        if (x<0){
-            cout<<"Number has negative sign";
-        }
+        cout<<"Number has positive sign";
     }
+    if (x==0)
+    {
+        cout<<"Number is zero";
+    }
+    if (x<0){
+        cout<<"Number has negative sign";
+    }
+}
+
 int main()
 {
     sign();
@@ -55,10 +56,7 @@ double CircleArea ()
     cout << "Enter radius\n";
     cin >> R;
     S1=3.14*R*R;
-    if (S1>=0)
-     cout << "The square of circle equals " << S1;
-    else
-        cout<<"Error";
+    cout << "The square of circle equals " << S1;
     return 0;
 }
 double RectangleArea ()
@@ -66,10 +64,12 @@ double RectangleArea ()
     cout << "Enter 'a' and 'b' sides\n";
     cin >> a >> b;
     S2=a*b;
-    if (S2>=0)
-        cout << "The area of rectangle equals " << S2;
-    else
+    if (a<0 or b<0)
+    {
         cout<<"Error";
+    }
+    else
+        cout << "The area of rectangle equals " << S2;
     return 0;
 }
 double TriangleArea ()
@@ -79,10 +79,12 @@ double TriangleArea ()
     double p;
     p=(a+b+c)/2;
     S3=sqrt(p*(p-a)*(p-b)*(p-c));
-    if (S3>=0)
-        cout << "The area of triangle equals " << S3;
+    if (a<0 || b<0 || c<0)
+    {
+        cout<<"Error";
+    }
     else
-        cout<<"Er"
+        cout << "The area of triangle equals " << S3;
     return 0;
 }
 int main() {
@@ -181,7 +183,7 @@ int main()
     return 0;
 }*/
 //4.6
-#include <iostream> //Сделано
+/*#include <iostream> //Сделано
 #include <cmath>
 #include <cstring>
 using namespace std;
@@ -407,7 +409,7 @@ int main()
 {
         converter();
         return 0;
-}
+}*/
 //4.7
 /*
 #include <iostream>
