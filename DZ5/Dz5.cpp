@@ -30,28 +30,38 @@ int main()
 //Решето
 /*#include <iostream>
 using namespace std;
-int i,k=0;
+int j,z;
+float a;
+bool k;
 int main()
 {
-    cout<<"Enter natural number: "<<endl;
-    cin>>i;
-    if ((i<=0) or (i!=int(i)))
+    do
     {
-        cout<<"Number must be natural";
-        return 0;
-    }
-    else {
-        for (int j = 2; j < i; j++) {
-            if ((j<=0) or (j!=int(j))) continue;
-            else
+        cout << "Enter natural number:\n";
+        cin >> a;
+    } while ((a <= 2) || (a != (int)a));
+    k = true;
+    j = 3;
+    for (int i = 2; i <= a; i++)
+    {
+        while ((k == true) && (j < i/2))
+        {
+
+            if ((i % j) == 0)
             {
-                k+=1;
-                cout<<"Number "<<k<<"- "<<j<<endl;
+                k = false;
             }
+            j += 1;
         }
+        if (k == true)
+        {
+            z+=1;
+            cout<<"Number "<<z<<"- "<<i<<endl;
+        }
+        j = 2;
+        k = true;
     }
-}
-*/
+}*/
 //Обработка текстовых файлов
 //№21
 /*#include <iostream>
@@ -271,120 +281,81 @@ int main()
 }*/
 //Файлы
 //21
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////////////
-// Решето
-
-/*
-#include <iostream>
+/*#include <iostream>
+#include <string>
+#include <fstream>
 using namespace std;
+int all,points,gold,silver,bronze;
+string c1[10],c[10]={"Austria",
+                   "Germany",
+                   "Canada",
+                   "China",
+                   "Korea",
+                   "Norway",
+                   "Russia",
+                   "USA",
+                   "Finland",
+                   "Japan"};
+int n[9][6];
+int m[9][6];
+ofstream file;
+int main() {
+    cout << "Enter Name of country, then amount of gold, silver and bronze medals." << endl;
+    for (int i = 0; i < 10; i++) {
+        cin >> gold>>silver>>bronze;
+        all=gold+silver+bronze;
+        points=gold*7+silver*6+bronze*5;
 
-int main()
-{
-	int n;
-	cout << "Введите число" << endl;
-	cin >> n;
-	cout << endl;
-	int* a = new int[n + 1];
-	for (int i = 0; i < n + 1; i++)
-		a[i] = i;
-	for (int p = 2; p < n + 1; p++)
-	{
-		if (a[p] != 0)
-		{
-			cout << a[p] << endl;
-			for (int j = p * p; j < n + 1; j += p)
-				a[j] = 0;
-		}
-	}
-	cin.get();
-}
-*/
-//Шарики
+        n[i][1] = gold;
+        n[i][2] = silver;
+        n[i][3] = bronze;
+        n[i][4]=all;
+        n[i][5]=points;
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        for (int z=0;z<10;z++)
+        {
+            if (n[z][5]<n[z+1][5])
+            {
+                c1[z]=c[z];
+                c[z]=c[z+1];
+                c[z+1]=c1[z];
+                for (int j=1;j<6;j++)
+                {
+                    m[z][j]=n[z][j];
+                    n[z][j]=n[z+1][j];
+                    n[z+1][j]=m[z][j];
+                }
+            }
+        }
+    }
+    file.open("E:\\Work\\GitHub\\Procedural-Programming-\\DZ5\\Olimp.txt");
+    for (int g = 0; g < 10; g++)
+    {
+            cout<<c[g]<<" "<<n[g][1]<<" "<<n[g][2]<<" "<<n[g][3]<<" "<<n[g][4]<<" "<<n[g][5]<<endl;
+            file<<c[g]<<" "<<n[g][1]<<" "<<n[g][2]<<" "<<n[g][3]<<" "<<n[g][4]<<" "<<n[g][5]<<endl;
+    }
+    file.close();
+}*/
 /*
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
-
-bool proverka(vector<int> ball)
-{
-	for (int i = 0; i < ball.size(); i++)
-	{
-		if (i + 1 == ball[i])
-		{
-			return true;
-		}
-	}
-}
-
-int main()
-{
-	setlocale(0, "");
-	cout << "Введите количество шаров -> ";
-	int n;
-	cin >> n;
-	vector< int > vector;
-	int count = 0;
-
-	for (int i = 1; i <= n; i++)
-	{
-		vector.push_back(i);
-	}
-	do
-	{
-		if (proverka(vector) == true)
-		{
-			count += 1;
-		}
-	}
-	while (next_permutation(vector.begin(), vector.end()));
-	cout << "Количество подходящих вариаций ->" << count << endl;
-	return 0;
-}
-
- */
+3 5 9
+12 9 8
+6 5 4
+0 6 2
+3 1 2
+10 10 5
+9 6 3
+6 3 4
+2 4 6
+5 1 4
+Austria
+Germany
+Canada
+China
+Korea
+Norway
+Russia
+USA
+Finland
+Japan*/
