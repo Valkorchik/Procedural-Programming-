@@ -66,11 +66,12 @@ int main()
 //№21
 /*#include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 int main()
 {
     string s,sr;
-    ifstream fin("E:\\Work\\GitHub\\Procedural-Programming-\\DZ5\\21-22.txt");
+    ifstream fin("C:\\Users\\GX701LV PR#3\\Documents\\GitHub\\Procedural-Programming-\\DZ5\\21-22.txt");
     getline(fin,s);
     double max_chast=0;
     double kol_b=0;
@@ -108,7 +109,7 @@ double min_chast=1000.0;
 int main()
 {
     string s,sr;
-    ifstream fin("E:\\Work\\GitHub\\Procedural-Programming-\\DZ5\\21-22.txt");
+    ifstream fin("C:\\Users\\GX701LV PR#3\\Documents\\GitHub\\Procedural-Programming-\\DZ5\\21-22.txt");
     getline(fin,s);
     double max_chast=0;
     double chast;
@@ -281,7 +282,7 @@ int main()
 }*/
 //Файлы
 //21
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <fstream>
 using namespace std;
@@ -300,7 +301,7 @@ int n[9][6];
 int m[9][6];
 ofstream file;
 int main() {
-    cout << "Enter Name of country, then amount of gold, silver and bronze medals." << endl;
+    cout << "Enter amount of gold, silver and bronze medals." << endl;
     for (int i = 0; i < 10; i++) {
         cin >> gold>>silver>>bronze;
         all=gold+silver+bronze;
@@ -330,14 +331,14 @@ int main() {
             }
         }
     }
-    file.open("E:\\Work\\GitHub\\Procedural-Programming-\\DZ5\\Olimp.txt");
+    file.open("C:\\Users\\GX701LV PR#3\\Documents\\GitHub\\Procedural-Programming-\\DZ5\\Olimp.txt");
     for (int g = 0; g < 10; g++)
     {
             cout<<c[g]<<" "<<n[g][1]<<" "<<n[g][2]<<" "<<n[g][3]<<" "<<n[g][4]<<" "<<n[g][5]<<endl;
             file<<c[g]<<" "<<n[g][1]<<" "<<n[g][2]<<" "<<n[g][3]<<" "<<n[g][4]<<" "<<n[g][5]<<endl;
     }
     file.close();
-}*/
+}
 /*
 3 5 9
 12 9 8

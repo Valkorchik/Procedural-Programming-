@@ -183,7 +183,7 @@ int main()
     return 0;
 }*/
 //4.6
-/*#include <iostream> //Сделано
+#include <iostream> //Сделано
 #include <cmath>
 #include <cstring>
 using namespace std;
@@ -409,7 +409,7 @@ int main()
 {
         converter();
         return 0;
-}*/
+}
 //4.7
 /*
 #include <iostream>

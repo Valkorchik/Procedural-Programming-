@@ -55,7 +55,7 @@ for (int i = 0; i < ball.size(); i++)
 int main()
 {
 
-cout << "Введите количество шаров -> ";
+cout << "Enter amount of balls -> ";
 int n;
 cin >> n;
 vector< int > vector;
@@ -72,8 +72,8 @@ do
         count += 1;
     }
 }
-while (next_permutation(vector.begin(), vector.end()));
-cout << "Количество подходящих вариаций -> " << count << endl;
+while (next_permutation(vector.begin(), vector.end()));  //Переставляет местами начало и конец, выставляет правильный порядок
+cout << "Number of variants -> " << count << endl;
 return 0;
 }
 
