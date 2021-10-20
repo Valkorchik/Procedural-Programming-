@@ -213,76 +213,12 @@ int main()
     Transfer();
     return 0;
 }*/
-//22
-/*#include <iostream>
-#include <string>
-#include <math.h>
-#define USE_MATH_DEFINES
-using namespace std;
-int l,n,k,num10;
-string s,result,newStr = "";
-char simvols[30] = {'2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v' };
-char sim[5] = { '0','1','2','3','4'};
-int a[100];
-int b[100];
-string toSS(int num, int SS)
-{
-    if (num < SS)
-    {
-        newStr += sim[num];
-    }
-    else
-    {
-        newStr = toSS(num / SS, SS) + sim[num % SS];
-    }
-    return newStr;
-}
-void Transfer()
-{
-    cout<<"Massive after transfer equals: \n";
-    for (int i=0;i<k;i++) {
-        s = to_string(a[i]);
-        for (int i = s.length() - 1; i >= 0; i--) {
-            for (int numSim = 0; numSim < 2; numSim++) {
-                if (s[i] == sim[numSim]) {
-                    num10 += numSim * pow(2, (s.length() - i) - 1);
-                }
-            }
-        }
-        result=toSS(num10, 5);
-        num10=0;
-        b[i]=stoi(result);
-        result="";
-        newStr="";
-        l+=1;
-        cout<<l<<") "<<b[i]<<endl;
-    }
-}
-int main()
-{
-    cout<<"How many numbers do you want to transform into pentagonal numeral system?"<<endl;
-    cin>>k;
-    cout<<"Now enter binary numbe(r/s)"<<endl;
-    for (int i=0; i<k;i++)
-    {
-        cin >> n;
-        s=to_string(n);
-        for (int j = 0; j < 30; j++) {
-            for (int z = 0; z < s.length(); z++) {
-                if (simvols[j] == s[z]) {
-                    cerr << "Error. Cant use non binary number here;";
-                    return 0;
-                }
-            }
-        }
-        a[i] = n;
-    }
-    Transfer();
-    return 0;
-}*/
+//42
+#include <iostream>
+
 //Файлы
 //21
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <fstream>
 using namespace std;
@@ -338,7 +274,7 @@ int main() {
             file<<c[g]<<" "<<n[g][1]<<" "<<n[g][2]<<" "<<n[g][3]<<" "<<n[g][4]<<" "<<n[g][5]<<endl;
     }
     file.close();
-}
+}*/
 /*
 3 5 9
 12 9 8

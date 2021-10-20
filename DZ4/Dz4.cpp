@@ -183,16 +183,18 @@ int main()
     return 0;
 }*/
 //4.6
-#include <iostream> //Сделано
+/*#include <iostream> //Сделано
 #include <cmath>
 #include <cstring>
 using namespace std;
 int k=0;
 void converter() {
     char buff[100];
+    char err[100];
     for (int i = 0; i < 100; i++) {
         buff[i] = NULL;
     }
+    int chetdef = 0;
     int chetchik = 0;
     cout << "Enter rim number\n";
     cin.getline(buff, 100);
@@ -389,6 +391,10 @@ void converter() {
 
                 chetchik = chetchik + 1000;
                 break;
+
+            default: err[chetdef] = buff[i]; chetdef++;
+                break;
+
         }
 
     }
@@ -409,7 +415,99 @@ int main()
 {
         converter();
         return 0;
+}*/
+//4.6 G
+/*#include <iostream>
+#include <string>
+#define USE_MATH_DEFINES
+#include <math.h>
+using namespace std;
+int result, flag, nm, np, met;
+string num;
+int converter(char num) {
+        switch (toupper(num)) {
+            case 'I':
+               return 1;
+               break;
+            case 'V':
+                return 5;
+                break;
+            case 'X':
+                return  10;
+                break;
+            case 'L':
+                return 50;
+                break;
+            case 'C':
+                return 100;
+                break;
+            case 'D':
+                return 500;
+                break;
+            case 'M':
+                return 1000;
+                break;
+        }
 }
+int proverka(string num)
+{
+    met = 0;
+    flag = 1;
+    result = converter(num[0]);
+    nm = result;
+    for (int i = 1; i < num.length(); i++)
+    {
+        np = converter(num[i]);
+        if ((met != 0) && ((met < np) || ((met == np) && ((met / pow(10, int(log10(met))) == 5) && (nm < met) || (nm > met)))))
+        {
+            cerr << "ERROR...";
+            return 0;
+        }
+        result = result + np;
+        if (nm == np)
+        {
+            flag += 1;
+            if ((np / pow(10, int(log10(np))) == 5) && (flag == 2))
+            {
+                cerr << "ERROR....";
+                return 0;
+            }
+            if (flag == 4)
+            {
+                cerr << "ERROR..";
+                return 0;
+            }
+        }
+        else
+        {
+            if (nm < np)
+            {
+                if (((np != 5 * nm) && (np != 10 * nm)) || (flag > 1))
+                {
+                    cerr << "ERROR....";
+                    return 0;
+                }
+                result = result - 2 * nm;
+            }
+            flag = 1;
+            met = nm;
+
+        }
+        nm = np;
+    }
+    return result;
+}
+int main()
+{
+    cout << "Enter rim number\n";
+    cin>>num;
+    result=proverka(num);
+    if (result !=0)
+    {
+        cout << "Your arabic number is\n " << result << endl;
+    }
+    return 0;
+}*/
 //4.7
 /*
 #include <iostream>
