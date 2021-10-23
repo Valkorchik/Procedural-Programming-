@@ -214,7 +214,7 @@ int main()
     return 0;
 }*/
 //42
-/*#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
@@ -243,7 +243,7 @@ string Checker()
 {
     for (int i=0;i<k;i++)
     {
-        for (int j=i+1;j<k+1;j++)
+        for (int j=i+1;j<k;j++)
         {
             if (a[i]==a[j])
             {
@@ -251,8 +251,20 @@ string Checker()
                 ID+=" ";
                 ID+= to_string(j);
                 ID+="; ";
-                numbers.push_back(a[i]);
-
+                int wasBefore=0;
+                for(int k=0;k<i;k++)
+                {
+                    if (a[k]==a[i])
+                    {
+                        wasBefore=1;break;
+                    }
+                }
+                if(wasBefore==0)
+                {
+                    numbers.push_back(a[i]);
+                }
+                numbers.push_back(a[j]);
+                break;
             }
         }
     }
@@ -284,7 +296,7 @@ int main()
         a[i] = n;
     }
     cout<<Checker();
-}*/
+}
 //Файлы
 //21
 /*#include <iostream>
