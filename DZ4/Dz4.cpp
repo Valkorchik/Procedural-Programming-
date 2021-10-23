@@ -695,4 +695,3 @@ int main()
 {
     translatoorSS();
 }*/
-

@@ -214,8 +214,77 @@ int main()
     return 0;
 }*/
 //42
-#include <iostream>
+/*#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+vector<int> numbers;
+int k=0,n,counter=0;
+int a[100],b[100];
+string ID="";
+void Sorter()
+{
 
+    for(int i=0;i<numbers.size();i++) {
+        b[i] = numbers[i];
+        counter+=1;
+    }
+    for(int i=0;i<numbers.size();i++) {
+        for (int j=0; j < numbers.size(); j++) {
+            if (b[j] < b[j + 1]) {
+                a[j] = b[j];
+                b[j] = b[j + 1];
+                b[j + 1] = a[j];
+            }
+        }
+    }
+}
+string Checker()
+{
+    for (int i=0;i<k;i++)
+    {
+        for (int j=i+1;j<k+1;j++)
+        {
+            if (a[i]==a[j])
+            {
+                ID+= to_string(i);
+                ID+=" ";
+                ID+= to_string(j);
+                ID+="; ";
+                numbers.push_back(a[i]);
+
+            }
+        }
+    }
+    Sorter();
+    if (counter==0)
+    {
+        return "Same numbers dont exist in array.";
+    }
+    else
+    {
+        cout<<"Amount of same numbers equals: "<<counter<<endl;
+        cout<<"ID's of positions in array: "<<ID<<endl;
+        cout<<"Same numbers in new sorted array: ";
+        for (int i=0;i<numbers.size();i++)
+        {
+            cout<<b[i]<<" ";
+        }
+        return ".";
+    }
+}
+int main()
+{
+    cout<<"How many numbers do you want to add?"<<endl;
+    cin>>k;
+    cout<<"Now enter numbe(r/s)"<<endl;
+    for (int i=0; i<k;i++)
+    {
+        cin >> n;
+        a[i] = n;
+    }
+    cout<<Checker();
+}*/
 //Файлы
 //21
 /*#include <iostream>
