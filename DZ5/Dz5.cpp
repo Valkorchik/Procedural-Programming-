@@ -214,7 +214,7 @@ int main()
     return 0;
 }*/
 //42
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
@@ -296,7 +296,7 @@ int main()
         a[i] = n;
     }
     cout<<Checker();
-}
+}*/
 //Файлы
 //21
 /*#include <iostream>
