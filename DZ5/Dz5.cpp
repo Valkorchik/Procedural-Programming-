@@ -216,14 +216,30 @@ int main()
 //42
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 int k = 0, n, counter = 0;
 int a[100],b[100];
+string filler;
+string word;
 string ID = "";
 void Sorter()
 {
-    for (int i = 0; i < counter; i++) {
-        for (int j = 0; j < counter; j++) {
+    for (int i=0;i<filler.length();i++)
+    {
+        if (filler[i]!=' ')
+        {
+            word+=filler[i];
+        }
+        if(filler[i]==' ')
+        {
+            b[i]=stoi(word);
+            counter+=1;
+            word="";
+        }
+    }
+    for (int i = 0; i < filler.length(); i++) {
+        for (int j = 0; j < filler.length(); j++) {
             if (b[j] < b[j + 1]) {                  //Пузырек
                 a[j] = b[j];
                 b[j] = b[j + 1];
@@ -254,11 +270,11 @@ string Checker()
                 }
                 if (wasBefore == 0)
                 {
-                    b[i] = a[i];
-                    counter += 1;
+                    filler+= to_string(a[i]);
+                    filler+=" ";
                 }
-                b[j] = a[j];
-                counter += 1;
+                filler += to_string(a[j]);
+                filler+=" ";
                 break;
             }
         }
@@ -273,7 +289,7 @@ string Checker()
         cout << "Amount of same numbers equals: " << counter << endl;
         cout << "ID's of positions in array: " << ID << endl;
         cout << "Same numbers in new sorted array: ";
-        for (int i = 0; i < counter; i++)
+        for (int i = 0; i <counter; i++)
         {
             cout << b[i] << " ";
         }

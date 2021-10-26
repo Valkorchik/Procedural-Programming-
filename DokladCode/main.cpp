@@ -9,8 +9,8 @@
         int *temp = a;
         a = b;
         b = temp;
-        return;
     }
+
     /* Функция для сортировки массива с использованием вставки sort */
     void InsertionSort(int arr[], int *begin, int *end)
     {
@@ -31,7 +31,6 @@
             }
             arr[j+1] = key;
         }
-        return;
     }
     // Функция для разделения массива и возврата
     // точка разбиения
