@@ -214,24 +214,17 @@ int main()
     return 0;
 }*/
 //42
-/*#include <iostream>
+#include <iostream>
 #include <string>
-#include <vector>
 using namespace std;
-vector<int> numbers;
-int k=0,n,counter=0;
+int k = 0, n, counter = 0;
 int a[100],b[100];
-string ID="";
+string ID = "";
 void Sorter()
 {
-
-    for(int i=0;i<numbers.size();i++) {
-        b[i] = numbers[i];
-        counter+=1;
-    }
-    for(int i=0;i<numbers.size();i++) {
-        for (int j=0; j < numbers.size(); j++) {
-            if (b[j] < b[j + 1]) {
+    for (int i = 0; i < counter; i++) {
+        for (int j = 0; j < counter; j++) {
+            if (b[j] < b[j + 1]) {                  //Пузырек
                 a[j] = b[j];
                 b[j] = b[j + 1];
                 b[j + 1] = a[j];
@@ -241,62 +234,64 @@ void Sorter()
 }
 string Checker()
 {
-    for (int i=0;i<k;i++)
+    for (int i = 0; i < k; i++)
     {
-        for (int j=i+1;j<k;j++)
+        for (int j = i + 1; j < k; j++)
         {
-            if (a[i]==a[j])
+            if (a[i] == a[j])   //Поиск одинаковвых элементов
             {
-                ID+= to_string(i);
-                ID+=" ";
-                ID+= to_string(j);
-                ID+="; ";
-                int wasBefore=0;
-                for(int k=0;k<i;k++)
+                ID += to_string(i);
+                ID += " ";
+                ID += to_string(j);   //Нахождение позиций
+                ID += "; ";
+                int wasBefore = 0;
+                for (int k = 0; k < i; k++)
                 {
-                    if (a[k]==a[i])
+                    if (a[k] == a[i])
                     {
-                        wasBefore=1;break;
+                        wasBefore = 1; break;            //Создание исключения, чтобы не учитывать предыдущие значения
                     }
                 }
-                if(wasBefore==0)
+                if (wasBefore == 0)
                 {
-                    numbers.push_back(a[i]);
+                    b[i] = a[i];
+                    counter += 1;
                 }
-                numbers.push_back(a[j]);
+                b[j] = a[j];
+                counter += 1;
                 break;
             }
         }
     }
     Sorter();
-    if (counter==0)
+    if (counter == 0)
     {
         return "Same numbers dont exist in array.";
     }
     else
     {
-        cout<<"Amount of same numbers equals: "<<counter<<endl;
-        cout<<"ID's of positions in array: "<<ID<<endl;
-        cout<<"Same numbers in new sorted array: ";
-        for (int i=0;i<numbers.size();i++)
+        cout << "Amount of same numbers equals: " << counter << endl;
+        cout << "ID's of positions in array: " << ID << endl;
+        cout << "Same numbers in new sorted array: ";
+        for (int i = 0; i < counter; i++)
         {
-            cout<<b[i]<<" ";
+            cout << b[i] << " ";
         }
         return ".";
     }
 }
 int main()
 {
-    cout<<"How many numbers do you want to add?"<<endl;
-    cin>>k;
-    cout<<"Now enter numbe(r/s)"<<endl;
-    for (int i=0; i<k;i++)
+    cout << "How many numbers do you want to add?" << endl;
+    cin >> k;
+    cout << "Now enter numbe(r/s)" << endl;
+    for (int i = 0; i < k; i++)
     {
         cin >> n;
         a[i] = n;
     }
-    cout<<Checker();
-}*/
+    cout << Checker();
+}
 //Файлы
 //21
 /*#include <iostream>

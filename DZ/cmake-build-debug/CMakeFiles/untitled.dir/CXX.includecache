@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/GX701LV PR#3/Documents/GitHub/Procedural-Programming-/DZ/Dz1.cpp
+/cygdrive/e/Work/GitHub/Procedural-Programming-/DZ/Dz1.cpp
 iostream
 -
 iostream
 -
 math.h
+-
+iostream
+-
+string
 -
 
